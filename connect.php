@@ -25,7 +25,7 @@
         $stmt = $conn->prepare("insert into login(email, firstname, lastname, password)values(?, ?, ?, ?)");
         $stmt->bind_param("ssss",$email, $firstname, $lastname, $password);
         $stmt->execute();
-        header("Location:http://localhost/GPST-xampp/Interface.html");
+        header("Location:https://ishandeshmukh.github.io/signup.html");
         $stmt->close();
         $conn->close();
     }
