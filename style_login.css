@@ -79,15 +79,15 @@
                 background-size: cover;
             }
         button {   
-             background-color: #4CAF50;   
-             width: 100%;  
+             background-color: #ffffff;   
+             width: 50%;  
               color: Black;   
               padding: 15px;   
               margin: 10px 0px;   
               border: none;   
               cursor: pointer;   
                }      
-       input[type=text], input[type=password] {   
+       input[type=email], input[type=password] {   
               width: 100%;   
               margin: 8px 0;  
               padding: 12px 20px;   
@@ -99,9 +99,15 @@
               opacity: 0.7;   
           }   
         .cancelbtn {   
-              width: auto;   
-              padding: 10px 18px;  
-              margin: 10px 5px;  
+              width: 37%;   
+              padding: 15px 18px;  
+              margin: 10px 5px;
+              margin: 0;
+              position: absolute;
+              top: 46.6%;
+              left: 70.4%;
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); 
           }             
        .container {   
               padding: 39px;   
@@ -118,15 +124,7 @@
               margin-left: auto;
               margin-right: auto;
               text-align: left;
-          }
-        .cancelbtn {
-              margin: 0;
-              position: absolute;
-              top: 53.5%;
-              left: 39%;
-              -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-        }
+          }        
         .h1 {
             pointer-events: none;
             user-select: none; 
