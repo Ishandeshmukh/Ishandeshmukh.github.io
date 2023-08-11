@@ -50,6 +50,7 @@ function getPosition(position) {
       accuracy
   );
 }
+}
   
 
     
