@@ -39,7 +39,7 @@ function getPosition(position) {
 
   var featureGroup = L.featureGroup([marker, circle]).addTo(mymap);
 
-  map_init.fitBounds(featureGroup.getBounds());
+  mymap.fitBounds(featureGroup.getBounds());
 
   console.log(
     "Your coordinate is: Lat: " +
