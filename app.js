@@ -51,6 +51,3 @@ function getPosition(position) {
   );
 }
 }
-  
-
-    
