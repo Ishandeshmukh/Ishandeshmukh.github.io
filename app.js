@@ -27,17 +27,17 @@ function getPosition(position) {
   accuracy = position.coords.accuracy;
 
   if (marker) {
-    map_init.removeLayer(marker);
+    mymap.removeLayer(marker);
   }
 
   if (circle) {
-    map_init.removeLayer(circle);
+    mymap.removeLayer(circle);
   }
 
   marker = L.marker([lat, long]);
   circle = L.circle([lat, long], { radius: accuracy });
 
-  var featureGroup = L.featureGroup([marker, circle]).addTo(map_init);
+  var featureGroup = L.featureGroup([marker, circle]).addTo(mymap);
 
   map_init.fitBounds(featureGroup.getBounds());
 
