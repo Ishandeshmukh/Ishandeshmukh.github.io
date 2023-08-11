@@ -13,26 +13,43 @@ function init(){
         ]
     })
 
-    if(!navigator.geolocation) {
-        console.log("Your browser dosent support geolocation feature! Please use latest version of chrome to access")
-    } else {
-        navigator.geolocation.getCurrentPostion(getPosition)
-    }
-    function getPosition(position){
-        console.log(position)
-        var lat = position.coords.latitude
-        var long = position.coords.longitude
-        var accuracy = position.coords.accuracy
+    if (!navigator.geolocation) {
+  console.log("Your browser doesn't support geolocation feature!");
+} else {
+  navigator.geolocation.getCurrentPosition(getPosition);
+}
+    var marker, circle, lat, long, accuracy;
 
-        var marker = L.marker([lat, long]).addTo(mymap)
+function getPosition(position) {
+  // console.log(position)
+  lat = position.coords.latitude;
+  long = position.coords.longitude;
+  accuracy = position.coords.accuracy;
 
-        
+  if (marker) {
+    map_init.removeLayer(marker);
+  }
 
-        console.log("Your coordinates are: Lat: "+ lat +" Long: "+ long+ " Accuracy: "+ accuracy)
-    
-    }
+  if (circle) {
+    map_init.removeLayer(circle);
+  }
+
+  marker = L.marker([lat, long]);
+  circle = L.circle([lat, long], { radius: accuracy });
+
+  var featureGroup = L.featureGroup([marker, circle]).addTo(map_init);
+
+  map_init.fitBounds(featureGroup.getBounds());
+
+  console.log(
+    "Your coordinate is: Lat: " +
+      lat +
+      " Long: " +
+      long +
+      " Accuracy: " +
+      accuracy
+  );
+}
   
 
     
-
-}
