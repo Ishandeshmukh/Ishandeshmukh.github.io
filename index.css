@@ -1,0 +1,26 @@
+body {
+    background-image: url('https://images.pexels.com/photos/1062249/pexels-photo-1062249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container1 {
+    background-color: lightgreen;
+    padding: 40px;
+    max-width: fit-content;
+    max-height: 85px;
+    border-radius: 20px;
+    
+}
+
+.container2 {
+    background-color: lightgreen;
+    padding: 40px;
+    max-width: fit-content;
+    max-height: 85px;
+    border-radius: 20px;
+    position: absolute;
+    top: 9.3%;
+    left: 79%;
+
+}
