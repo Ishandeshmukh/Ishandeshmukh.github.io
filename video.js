@@ -101,3 +101,9 @@ document.getElementById('join-btn').addEventListener('click', joinStream)
 document.getElementById('leave-btn').addEventListener('click', leaveAndRemoveLocalStream)
 document.getElementById('mic-btn').addEventListener('click', toggleMic)
 document.getElementById('camera-btn').addEventListener('click', toggleCamera)
+
+$('.speaker').click(function(e) {
+    e.preventDefault();
+  
+      $(this).toggleClass('mute');
+  });
